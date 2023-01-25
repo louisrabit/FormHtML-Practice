@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Form </title>
+
+    <style>
+    h1{
+       
+        padding-top: 5px;
+        padding-bottom: 1px;
+        padding-left: 25px;
+        font-size: 30px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+ #register-form{
+    background-color: aliceblue;
+    width: 300px;
+   padding: 25px;
+   font-family: sans-serif;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .input-label{
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+ }
+
+ .input-item{
+    width: 100%;
+ }
+
+ #check-box {
+    margin-top: 10px;
+    margin-bottom: 15px;
+ }
+
+
+
+    </style>
+
+</head>
+
+
+
+<body style="background-color: rgba(246, 33, 5, 0.485);">
+   <!--  to create a form , need a form element -->
+
+   <H1>SignUp</H1> 
+<!-- send info to back end = method="Get" and "Post" -->
+<!-- the key velue is the same that we gave in "name" -->
+<!-- if i dont put value name in input the information is not send to 
+back-end ...and do not show in url -->
+
+<!-- Get -- 1 )cannot be used to send security inf . every inf that 
+we put in form is posted in URL
+2)page url as a limit characters 3000 , cannot send large data  -->
+  
+<!-- Post method , as no limit size characters 
+doesnt show private data , in url -->
+
+<form id="register-form" method="GET">
+
+        <div>
+     <p class="input-label"> Full name </p>
+     <input  class="input-item" type="text"  name="full-name">
+       </div>
+
+     <div>
+        <p  class="input-label">Email</p>
+    <input class="input-item" type="email" name="email" >
+    
+    </div>
+
+    <div>
+        <p  class="input-label">Password:</p>
+        <input class="input-item" type="password" name="password" >
+    </div>
+
+    <div>
+        <p class="input-label"> Confirm Password:</p>
+    <input class="input-item" type="password" name="confirm-password">
+   
+    </div>
+
+    <div>
+        <p class="input-label"> Gender:</p>
+    <!--  when someone select this checkbox the value will send to backend -->
+        <input  type="radio" name="male" value="male">Male
+     <input  type="radio" name="female" value="female">Female
+    <input  type="checkbox" name="other" value="other">Other
+    </div>
+
+    
+
+    <div>
+       <p class="input-label"> Security Question:</p> 
+        <select  class="input-item" name="security-question">
+            <option value="pet-name">What is your pets name</option>
+            <option value="father-name">What is yout father name</option>
+            <option value="favorite-color" >Your favorite color</option>
+        </select>
+    </div>
+
+    <div>
+        <textarea class="input-item" name="awser"  cols="20" rows="5"></textarea>
+    </div>    
+<div><input id="check-box" type="checkbox" name="terms-conditions" value="accept">I accept the terms and conditions</div>
+
+<div>
+<input  type="submit" value="Register" >
+</div>
+</form>
